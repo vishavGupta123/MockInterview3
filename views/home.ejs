@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <style>
+      #signIn {
+        align-items: center;
+        display: block;
+        margin: auto;
+        width: 200px;
+        height: 100px;
+        background-color: aliceblue;
+        margin-top: 200px;
+      }
+      #signUp {
+        margin: auto;
+        display: block;
+        width: 200px;
+        height: 100px;
+        background-color: aliceblue;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+  </head>
+  <body>
+    <form action="/users/signIn" method="GET">
+      <input type="submit" value="sign-in" id="signIn" />
+    </form>
+    <form action="/users/signUp">
+      <input type="submit" value="sign-up" id="signUp" />
+    </form>
+    <script>
+      <% if(flash.success && flash.success.length>0){%>
+        new Noty({
+          theme:'relax',
+          text:"<%= flash.success %>",
+          type:'success',
+          layout:'topRight',
+          timeout:1500
+        }).show();
+        <% } %>
+    </script>
+  </body>
+</html>
