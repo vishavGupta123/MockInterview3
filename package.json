@@ -9,7 +9,7 @@
   "author": "Vishav Gupta",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "connect-flash": "^0.1.1",
     "crypto": "^1.0.1",
     "ejs": "^3.0.2",
